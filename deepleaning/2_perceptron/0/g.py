@@ -1,3 +1,5 @@
+#r論理回路を実装
+
 import numpy as np
 
 # b + w1x1 + w2x2 = tmp
