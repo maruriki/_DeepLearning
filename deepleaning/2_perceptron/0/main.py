@@ -1,4 +1,4 @@
-#半加算回路
+#全加算回路
 import g
 
 def halfaddr(x1,x2):
@@ -9,7 +9,11 @@ def halfaddr(x1,x2):
     return c,s
 
 if __name__=="__main__":
-    x1=input("x1=")
-    x2=input("x2=")
-    ha=halfaddr(x1,x2)
-    print(ha)
+    x0=int(input("x1="))
+    x1=int(input("x2="))
+    pc=int(input("x3="))
+    c0,s0=halfaddr(x0,x1)
+    c1,s1=halfaddr(s0,pc)
+    c=g.OR(c0,c1)
+    print(c,s1)
+                 
