@@ -30,3 +30,13 @@ def OR(x1,x2):
         return 0
     else:
         return 1
+    
+def NOT(x1):
+    w1,w2,b = -0.5,-0.5,0.7
+    x = np.array([x1,1])
+    w = np.array([w1,w2])
+    tmp = np.sum(w*x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
