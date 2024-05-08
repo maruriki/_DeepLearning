@@ -43,5 +43,11 @@ def NOT(x1):
     else:
         return 1
 
+def XOR(x1,x2):
+    s1=NAND(x1,x2)
+    s2=OR(x1,x2)
+    y=AND(s1,s2)
+    return y
+
 if __name__ == "__main__":
     print(AND(0,0))
